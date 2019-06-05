@@ -1,0 +1,18 @@
+environments:
+  - name: test
+    endpoints:
+     production:
+       url: 'http://test.acme.com'
+       config:
+         retryTimeOut: 60
+         retryDelay: 70
+         factor: 2
+
+  - name: production
+    endpoints:
+      production:
+        url: 'http://prod.acme.com'
+        config:
+          retryTimeOut: $RETRY
+      sandbox:
+        url: 'http://acme.sandbox.com'
